@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { NavLink, useLocation, useNavigate ,Link} from 'react-router-dom';
+import { NavLink, useLocation, Link} from 'react-router-dom';
 import { HiLocationMarker } from 'react-icons/hi';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import avatar from '../assets/venue/avatar.jpg';
@@ -7,7 +7,6 @@ import logo from '../assets/Logo (1).png';
 import LoginModal from './Login/LoginModal';
 import OtpModal from './Login/OtpModal';
 import ProfileModal from './Login/ProfileModal';
-import { useClickAway } from 'react-use';
 
 const Navbar = () => {
   const location = useLocation();
@@ -19,7 +18,6 @@ const Navbar = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [showProfile, setShowProfile] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-const navigate=useNavigate()
   const dropdownRef = useRef(null);
   // useClickAway(dropdownRef, () => setDropdownOpen(false));
 

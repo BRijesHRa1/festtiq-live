@@ -14,14 +14,9 @@ import event4 from "../assets/events/event4.png";
 import event5 from "../assets/events/event5.png";
 import event6 from "../assets/events/event6.png";
 
-import service1 from "../assets/services/service1.png";
-import service2 from "../assets/services/service2.png";
-import service3 from "../assets/services/service3.png";
-import service4 from "../assets/services/service4.png";
-import service5 from "../assets/services/service.5.png";
-import service6 from "../assets/services/service6.png";
 
-import gallerybackground from '../assets/gallery/gallerybackground.png';
+
+
 import MasonaryGrid from "../components/MasonaryGrid";
 import GallerySection from "../components/Home/Highlight";
 import WhyChooseUs from "../components/Home/ChooseUs";
@@ -98,15 +93,6 @@ export const eventCategories = [
 const images = [casserole1, casserole2, casserole3, casserole4, casserole5];
 
 // src/data/eventCategories.js
-
-const serviceImages = [
-  { id: 1, src: service1 },
-  { id: 2, src: service2 },
-  { id: 3, src: service3 },
-  { id: 4, src: service4 },
-  { id: 5, src: service5 },
-  { id: 6, src: service6 },
-];
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
@@ -178,17 +164,12 @@ export default function Home() {
 
   useEffect(() => {
     const iv = setInterval(() => {
-      setCurrent((c) => (c + 1) % len);
+      setCurrentIndex((c) => (c + 1) % len);
     }, 3000);
     return () => clearInterval(iv);
   }, [len]);
 
-  function circularOffset(i) {
-    let diff = i - current;
-    if (diff < -len / 2) diff += len;
-    if (diff > len / 2) diff -= len;
-    return diff;
-  }
+
 
   return (
     <div>
