@@ -1,7 +1,7 @@
 // src/pages/Home.jsx
 import React, { useState, useEffect } from "react";
 import background from "../assets/image1.png";
-import casserole1 from "../assets/casserole/carousel.png";
+import casserole1 from "../assets/casserole/Carousel.png";
 import casserole2 from "../assets/casserole/casserole2.png";
 import casserole3 from "../assets/casserole/casserole3.png";
 import casserole4 from "../assets/casserole/casserole4.png";
